@@ -58,8 +58,40 @@ static void usage(const char *prog)
  */
 static void access_cache(uint64_t addr)
 {
-    (void)addr;
-    (void)tick;
+    uint64_t set_mask = s == 0 ? 0 : (((uint64_t)1 << s) - 1);
+    uint64_t set = (addr >> b) & set_mask;
+    uint64_t tag = (s + b == 64) ? 0 : addr >> (s + b);
+    line_t *lines = cache + (size_t)set * E;
+    line_t *empty = NULL;
+    line_t *victim = &lines[0];
+    int i;
+
+    tick++;
+    for (i = 0; i < E; i++) {
+        if (lines[i].valid && lines[i].tag == tag) {
+            hits++;
+            lines[i].last_used = tick;
+            if (verbose)
+                printf(" hit");
+            return;
+        }
+        if (!lines[i].valid && empty == NULL)
+            empty = &lines[i];
+        if (lines[i].valid && lines[i].last_used < victim->last_used)
+            victim = &lines[i];
+    }
+
+    misses++;
+    if (empty != NULL) {
+        victim = empty;
+    } else {
+        evictions++;
+    }
+    victim->valid = 1;
+    victim->tag = tag;
+    victim->last_used = tick;
+    if (verbose)
+        printf(empty != NULL ? " miss" : " miss eviction");
 }
 
 /* replay - run every data access in the trace through the cache */

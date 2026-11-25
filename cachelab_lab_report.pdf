@@ -1,0 +1,300 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1120 >>
+stream
+0.08 0.17 0.34 rg 0 0 595 842 re f
+1 1 1 rg BT /F1 40 Tf 52 650 Td (Cache Lab) Tj ET
+0.80 0.88 1 rg BT /F2 16 Tf 54 607 Td (Cache-aware programming and cache reverse-engineering) Tj ET
+1 1 1 rg BT /F1 16 Tf 54 548 Td (ICS 2026 Fall  |  Lab 4) Tj ET
+0.85 0.90 1 rg BT /F2 13 Tf 54 510 Td (Author / Student ID: ____________________) Tj ET
+0.85 0.90 1 rg BT /F2 13 Tf 54 486 Td (Submission date: 2026-11-25) Tj ET
+0.12 0.26 0.47 rg 0.45 0.65 0.90 RG 1 w 54 312 487 116 re B
+1 1 1 rg BT /F1 17 Tf 80 390 Td (Final local verification) Tj ET
+0.80 0.88 1 rg BT /F2 11 Tf 80 355 Td (Part A) Tj ET
+1 1 1 rg BT /F1 17 Tf 80 330 Td (35 / 35) Tj ET
+0.80 0.88 1 rg BT /F2 11 Tf 198 355 Td (Part B) Tj ET
+1 1 1 rg BT /F1 17 Tf 198 330 Td (40 / 40) Tj ET
+0.80 0.88 1 rg BT /F2 11 Tf 316 355 Td (Part C) Tj ET
+1 1 1 rg BT /F1 17 Tf 316 330 Td (25 / 25) Tj ET
+0.80 0.88 1 rg BT /F2 11 Tf 434 355 Td (Bonus) Tj ET
+1 1 1 rg BT /F1 17 Tf 434 330 Td (10 / 10) Tj ET
+1 1 1 rg BT /F1 24 Tf 54 198 Td (Total score: 110 / 110) Tj ET
+0.80 0.88 1 rg BT /F2 11 Tf 54 164 Td (Built and tested with gcc, make, valgrind and the supplied driver.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 2734 >>
+stream
+0.08 0.17 0.34 rg 0 782 595 60 re f
+1 1 1 rg BT /F1 25 Tf 42 803 Td (Part A  |  LRU cache simulator) Tj ET
+0.35 0.43 0.56 rg BT /F2 10 Tf 44 764 Td (Faithfully replay each memory reference and reproduce csim-ref statistics) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 710 Td (Each address is separated into tag, set index, and block offset.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 689 Td (The simulator holds valid, tag, and last-used time for every cache line.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 668 Td (A monotonic timestamp implements LRU: the smallest time is the eviction victim.) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 615 Td (Address decomposition) Tj ET
+0.91 0.95 1 rg 0.25 0.35 0.55 RG 1 w 48 555 245 42 re B
+0 0 0 rg BT /F2 11 Tf 56 572.0 Td (tag  =  addr >> \(s + b\)) Tj ET
+0.85 0.92 1 rg 0.25 0.35 0.55 RG 1 w 293 555 154 42 re B
+0 0 0 rg BT /F2 11 Tf 301 572.0 Td (set index) Tj ET
+0.95 0.95 0.95 rg 0.25 0.35 0.55 RG 1 w 447 555 100 42 re B
+0 0 0 rg BT /F2 11 Tf 455 572.0 Td (offset) Tj ET
+0.35 0.40 0.48 rg BT /F2 10 Tf 319 542 Td (\(addr >> b\) & mask) Tj ET
+0.35 0.40 0.48 rg BT /F2 10 Tf 468 542 Td (low b bits) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 475 Td (Single-access decision flow) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 55 390 108 54 re B
+0 0 0 rg BT /F2 11 Tf 63 413.0 Td (lookup tag) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 210 390 108 54 re B
+0 0 0 rg BT /F2 11 Tf 218 413.0 Td (hit?) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 365 390 130 54 re B
+0 0 0 rg BT /F2 11 Tf 373 413.0 Td (update LRU / hit) Tj ET
+0.25 0.35 0.55 RG 1 w 163 417 m 210 417 l S
+0.25 0.35 0.55 RG 1 w 318 417 m 365 417 l S
+0 0 0 rg BT /F2 10 Tf 326 430 Td (yes) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 210 292 108 54 re B
+0 0 0 rg BT /F2 11 Tf 218 315.0 Td (empty line?) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 365 292 130 54 re B
+0 0 0 rg BT /F2 11 Tf 373 315.0 Td (fill / miss) Tj ET
+0.93 0.96 1 rg 0.25 0.35 0.55 RG 1 w 365 194 130 54 re B
+0 0 0 rg BT /F2 11 Tf 373 217.0 Td (LRU eviction) Tj ET
+0.25 0.35 0.55 RG 1 w 264 390 m 264 346 l S
+0 0 0 rg BT /F2 10 Tf 274 362 Td (no) Tj ET
+0.25 0.35 0.55 RG 1 w 318 319 m 365 319 l S
+0.25 0.35 0.55 RG 1 w 264 292 m 264 248 l S
+0.25 0.35 0.55 RG 1 w 264 248 m 365 221 l S
+0 0 0 rg BT /F1 13 Tf 48 135 Td (Boundary cases are handled explicitly: s=0 has no set bits, and s+b=64) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 114 Td (does not perform an undefined 64-bit shift.  M operations are replayed twice.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 93 Td (Result: all 8 official traces and all verbose/boundary checks pass.) Tj ET
+0.70 0.74 0.80 RG 0.6 w 42 38 m 553 38 l S
+0.35 0.40 0.48 rg BT /F2 9 Tf 42 21 Td (Cache Lab | ICS 2026 Fall | Experiment report) Tj ET
+0.35 0.40 0.48 rg BT /F2 9 Tf 530 21 Td (2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 3642 >>
+stream
+0.08 0.17 0.34 rg 0 782 595 60 re f
+1 1 1 rg BT /F1 25 Tf 42 803 Td (Part B  |  Matrix transpose) Tj ET
+0.35 0.43 0.56 rg BT /F2 10 Tf 44 764 Td (1 KiB direct-mapped cache, 32-byte blocks = eight int values per block) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 710 Td (The solution chooses a layout-specific blocking strategy to exploit spatial) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 689 Td (locality while avoiding systematic A/B conflicts in a direct-mapped cache.) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 632 Td (Blocking idea: one 8 x 8 tile) Tj ET
+0.79 0.89 1 rg 0.55 0.65 0.78 RG 1 w 75 440 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 111 440 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 147 440 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 183 440 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 75 404 32 32 re B
+0.79 0.89 1 rg 0.55 0.65 0.78 RG 1 w 111 404 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 147 404 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 183 404 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 75 368 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 111 368 32 32 re B
+0.79 0.89 1 rg 0.55 0.65 0.78 RG 1 w 147 368 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 183 368 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 75 332 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 111 332 32 32 re B
+0.94 0.97 1 rg 0.55 0.65 0.78 RG 1 w 147 332 32 32 re B
+0.79 0.89 1 rg 0.55 0.65 0.78 RG 1 w 183 332 32 32 re B
+0.89 0.97 0.86 rg 0.55 0.68 0.55 RG 1 w 330 440 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 366 440 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 402 440 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 438 440 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 330 404 32 32 re B
+0.89 0.97 0.86 rg 0.55 0.68 0.55 RG 1 w 366 404 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 402 404 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 438 404 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 330 368 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 366 368 32 32 re B
+0.89 0.97 0.86 rg 0.55 0.68 0.55 RG 1 w 402 368 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 438 368 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 330 332 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 366 332 32 32 re B
+0.96 0.99 0.94 rg 0.55 0.68 0.55 RG 1 w 402 332 32 32 re B
+0.89 0.97 0.86 rg 0.55 0.68 0.55 RG 1 w 438 332 32 32 re B
+0 0 0 rg BT /F2 12 Tf 75 485 Td (A tile: read by rows) Tj ET
+0 0 0 rg BT /F2 12 Tf 330 485 Td (B tile: write by columns) Tj ET
+0.85 0.35 0.18 RG 2 w 235 382 m 302 382 l S
+0.75 0.25 0.12 rg BT /F2 10 Tf 251 397 Td (transpose) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 280 Td (32 x 32: 8 x 8 blocks; diagonal values are delayed so a B write does not) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 259 Td (immediately evict the A line that supplied it.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 238 Td (64 x 64: each 8 x 8 block is split into 4 x 4 regions.  The upper-right) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 217 Td (values are staged in B, then exchanged with the lower-left region.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 196 Td (61 x 67: boundary-safe 16 x 16 blocks retain locality without out-of-bounds access.) Tj ET
+0.94 0.97 1 rg 0.25 0.35 0.55 RG 1 w 60 103 475 92 re B
+0 0 0 rg BT /F1 13 Tf 85 164 Td (Measured misses) Tj ET
+0 0 0 rg BT /F2 12 Tf 85 135 Td (32x32: 288 / 300     64x64: 1180 / 1300     61x67: 1993 / 2000) Tj ET
+0 0 0 rg BT /F2 12 Tf 85 115 Td (All transpose tests are correct.  Part B result: 40 / 40.) Tj ET
+0.70 0.74 0.80 RG 0.6 w 42 38 m 553 38 l S
+0.35 0.40 0.48 rg BT /F2 9 Tf 42 21 Td (Cache Lab | ICS 2026 Fall | Experiment report) Tj ET
+0.35 0.40 0.48 rg BT /F2 9 Tf 530 21 Td (3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 2299 >>
+stream
+0.08 0.17 0.34 rg 0 782 595 60 re f
+1 1 1 rg BT /F1 25 Tf 42 803 Td (Part C  |  Matrix multiplication) Tj ET
+0.35 0.43 0.56 rg BT /F2 10 Tf 44 764 Td (An 8 x 8 x 8 blocked multiply with exactly 16 non-loop int local variables) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 710 Td (The implementation has eight B scalars \(b0..b7\) and eight output accumulators) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 689 Td (\(c0..c7\).  This meets the stated 16-int limit without arrays or hidden scratch space.) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 632 Td (Blocked access schedule) Tj ET
+0.84 0.92 1 rg 0.25 0.35 0.55 RG 1 w 58 508 135 60 re B
+0 0 0 rg BT /F2 11 Tf 66 534.0 Td (A[i][kk..kk+7]) Tj ET
+0.88 0.96 0.86 rg 0.25 0.35 0.55 RG 1 w 230 508 135 60 re B
+0 0 0 rg BT /F2 11 Tf 238 534.0 Td (B[kk..kk+7][j..j+7]) Tj ET
+1 0.93 0.82 rg 0.25 0.35 0.55 RG 1 w 402 508 135 60 re B
+0 0 0 rg BT /F2 11 Tf 410 534.0 Td (C[i][j..j+7]) Tj ET
+0.85 0.35 0.18 RG 2 w 193 538 m 230 538 l S
+0.85 0.35 0.18 RG 2 w 365 538 m 402 538 l S
+0 0 0 rg BT /F2 10 Tf 72 476 Td (one A scalar) Tj ET
+0 0 0 rg BT /F2 10 Tf 250 476 Td (eight contiguous B values) Tj ET
+0 0 0 rg BT /F2 10 Tf 417 476 Td (eight scalar sums) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 400 Td (For each \(ii, jj, kk\) tile, the current output row is initialized from C) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 379 Td (or from zero.  Eight contiguous B values are loaded for each k, multiplied by) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 358 Td (A[i][k], and accumulated into c0..c7.  After the k tile, the eight sums are) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 337 Td (stored back to C for the next kk tile.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 316 Td (Splitting k is essential: only eight B rows are active, so they can be reused) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 295 Td (by the eight output rows instead of being displaced by a full 32-row scan.) Tj ET
+0.94 0.97 1 rg 0.25 0.35 0.55 RG 1 w 60 125 475 88 re B
+0 0 0 rg BT /F1 13 Tf 85 176 Td (Measured result: 32x32 correct, 2656 misses \(full-credit cutoff: 3999\).) Tj ET
+0 0 0 rg BT /F2 12 Tf 85 145 Td (No global data, malloc, recursion, arrays, or helper functions are used.) Tj ET
+0.70 0.74 0.80 RG 0.6 w 42 38 m 553 38 l S
+0.35 0.40 0.48 rg BT /F2 9 Tf 42 21 Td (Cache Lab | ICS 2026 Fall | Experiment report) Tj ET
+0.35 0.40 0.48 rg BT /F2 9 Tf 530 21 Td (4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 2846 >>
+stream
+0.08 0.17 0.34 rg 0 782 595 60 re f
+1 1 1 rg BT /F1 25 Tf 42 803 Td (Bonus  |  Reverse-engineering an unknown cache) Tj ET
+0.35 0.43 0.56 rg BT /F2 10 Tf 44 764 Td (Only cache_load, cache_store, cache_flush, and report are available) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 710 Td (Probe pipeline) Tj ET
+0.91 0.95 1 rg 0.25 0.35 0.55 RG 1 w 48 630 105 54 re B
+0 0 0 rg BT /F2 11 Tf 56 653.0 Td (1. find b) Tj ET
+0.91 0.95 1 rg 0.25 0.35 0.55 RG 1 w 164 630 105 54 re B
+0 0 0 rg BT /F2 11 Tf 172 653.0 Td (2. total lines) Tj ET
+0.91 0.95 1 rg 0.25 0.35 0.55 RG 1 w 310 630 105 54 re B
+0 0 0 rg BT /F2 11 Tf 318 653.0 Td (3. find s, E) Tj ET
+0.91 0.95 1 rg 0.25 0.35 0.55 RG 1 w 446 630 105 54 re B
+0 0 0 rg BT /F2 11 Tf 454 653.0 Td (4. policy + WA) Tj ET
+0.85 0.35 0.18 RG 2 w 153 657 m 164 657 l S
+0.85 0.35 0.18 RG 2 w 299 657 m 310 657 l S
+0.85 0.35 0.18 RG 2 w 435 657 m 446 657 l S
+0 0 0 rg BT /F1 13 Tf 48 560 Td (1. The first power-of-two offset that misses identifies the block size.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 539 Td (2. A two-pass binary search finds the largest all-hit working set: 2^s x E.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 518 Td (3. Repeated candidate-stride overflows evict block zero exactly at the true) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 497 Td (set-count threshold; E follows from total lines / number of sets.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 476 Td (4. Store-miss then load tests write allocation.  Refreshing an old line before) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 455 Td (one overflow distinguishes LRU from FIFO; 128 trials expose RANDOM behavior.) Tj ET
+0.08 0.17 0.34 rg BT /F1 16 Tf 48 390 Td (Example: E = 4 distinguishes LRU and FIFO) Tj ET
+0.95 0.95 0.95 rg 0.25 0.35 0.55 RG 1 w 55 300 100 48 re B
+0 0 0 rg BT /F2 11 Tf 63 320.0 Td (load A B C D) Tj ET
+0.95 0.95 0.95 rg 0.25 0.35 0.55 RG 1 w 190 300 100 48 re B
+0 0 0 rg BT /F2 11 Tf 198 320.0 Td (hit A) Tj ET
+0.95 0.95 0.95 rg 0.25 0.35 0.55 RG 1 w 305 300 100 48 re B
+0 0 0 rg BT /F2 11 Tf 313 320.0 Td (load E) Tj ET
+0.95 0.95 0.95 rg 0.25 0.35 0.55 RG 1 w 420 300 100 48 re B
+0 0 0 rg BT /F2 11 Tf 428 320.0 Td (read A) Tj ET
+0.85 0.35 0.18 RG 2 w 155 324 m 190 324 l S
+0.85 0.35 0.18 RG 2 w 290 324 m 325 324 l S
+0.85 0.35 0.18 RG 2 w 405 324 m 440 324 l S
+0.08 0.38 0.16 rg BT /F2 12 Tf 74 255 Td (LRU evicts B -> A is hit) Tj ET
+0.65 0.16 0.12 rg BT /F2 12 Tf 315 255 Td (FIFO evicts A -> A is miss) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 175 Td (Practice result: geometry 8/8, write allocation 8/8, policy 6/6.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 154 Td (Maximum observed probe count: 138,416; the limit is 1,000,000.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 133 Td (Bonus result: 10 / 10.) Tj ET
+0.70 0.74 0.80 RG 0.6 w 42 38 m 553 38 l S
+0.35 0.40 0.48 rg BT /F2 9 Tf 42 21 Td (Cache Lab | ICS 2026 Fall | Experiment report) Tj ET
+0.35 0.40 0.48 rg BT /F2 9 Tf 530 21 Td (5) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 2053 >>
+stream
+0.08 0.17 0.34 rg 0 782 595 60 re f
+1 1 1 rg BT /F1 25 Tf 42 803 Td (Verification and conclusions) Tj ET
+0.35 0.43 0.56 rg BT /F2 10 Tf 44 764 Td (Reproducible build and test results) Tj ET
+0.94 0.97 1 rg 0.25 0.35 0.55 RG 1 w 48 650 499 62 re B
+0 0 0 rg BT /F2 12 Tf 56 677.0 Td (make clean && make     |     python3 driver.py -i 00000000000) Tj ET
+0.08 0.17 0.34 rg BT /F1 18 Tf 48 598 Td (Automated evaluation summary) Tj ET
+0.96 0.98 1 rg 0.72 0.80 0.90 RG 1 w 55 540 485 44 re B
+0 0 0 rg BT /F1 13 Tf 70 556 Td (Part A  Cache simulator) Tj ET
+0.08 0.38 0.16 rg BT /F1 13 Tf 335 556 Td (35 / 35) Tj ET
+0 0 0 rg BT /F2 10 Tf 425 556 Td (All reference traces match) Tj ET
+0.96 0.98 1 rg 0.72 0.80 0.90 RG 1 w 55 482 485 44 re B
+0 0 0 rg BT /F1 13 Tf 70 498 Td (Part B  Transpose) Tj ET
+0.08 0.38 0.16 rg BT /F1 13 Tf 335 498 Td (40 / 40) Tj ET
+0 0 0 rg BT /F2 10 Tf 425 498 Td (288 / 1180 / 1993 misses) Tj ET
+0.96 0.98 1 rg 0.72 0.80 0.90 RG 1 w 55 424 485 44 re B
+0 0 0 rg BT /F1 13 Tf 70 440 Td (Part C  Multiply) Tj ET
+0.08 0.38 0.16 rg BT /F1 13 Tf 335 440 Td (25 / 25) Tj ET
+0 0 0 rg BT /F2 10 Tf 425 440 Td (2656 misses) Tj ET
+0.96 0.98 1 rg 0.72 0.80 0.90 RG 1 w 55 366 485 44 re B
+0 0 0 rg BT /F1 13 Tf 70 382 Td (Bonus  Cache inference) Tj ET
+0.08 0.38 0.16 rg BT /F1 13 Tf 335 382 Td (10 / 10) Tj ET
+0 0 0 rg BT /F2 10 Tf 425 382 Td (All eight practice caches correct) Tj ET
+0.12 0.28 0.50 rg 0.12 0.28 0.50 RG 1 w 55 255 485 62 re B
+1 1 1 rg BT /F1 22 Tf 78 279 Td (Final score: 110 / 110) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 190 Td (The implementation satisfies the source restrictions stated for all four parts.) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 169 Td (The Chinese Markdown companion contains the detailed implementation narrative;) Tj ET
+0 0 0 rg BT /F1 13 Tf 48 148 Td (this PDF presents the same results with diagrams and a compact visual summary.) Tj ET
+0.70 0.74 0.80 RG 0.6 w 42 38 m 553 38 l S
+0.35 0.40 0.48 rg BT /F2 9 Tf 42 21 Td (Cache Lab | ICS 2026 Fall | Experiment report) Tj ET
+0.35 0.40 0.48 rg BT /F2 9 Tf 530 21 Td (6) Tj ET
+endstream
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000229 00000 n 
+0000000299 00000 n 
+0000000435 00000 n 
+0000001607 00000 n 
+0000001743 00000 n 
+0000004529 00000 n 
+0000004666 00000 n 
+0000008361 00000 n 
+0000008499 00000 n 
+0000010851 00000 n 
+0000010989 00000 n 
+0000013888 00000 n 
+0000014026 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+16132
+%%EOF
